@@ -6,7 +6,7 @@
     <title>Crear Estudiante</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="{{ route('students.index') }}">Gestión</a>
@@ -24,21 +24,22 @@
         </div>
     </nav>
     
-    <div class="container mt-4">
-        <h1 class="text-primary">Registrar Nuevo Estudiante</h1>
+    <main class="flex-grow-1">
+        <div class="container mt-4">
+            <h1 class="text-primary">Registrar Nuevo Estudiante</h1>
 
-        <a href="{{ route('students.index') }}" class="btn btn-secondary">Volver a la lista de estudiantes</a>
-        
-        <!-- Mostrar errores de validacion -->
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+            <a href="{{ route('students.index') }}" class="btn btn-secondary">Volver a la lista de estudiantes</a>
+            
+            <!-- Mostrar errores de validacion -->
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="{{ route('students.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
@@ -121,16 +122,14 @@
                 </div>
             </form>
         </div>
+    </main>
+    <footer class="bg-dark text-center text-white mt-4 p-3 mt-auto">
+        <div class="container text-center">
+            <p class="mb-0">&copy; {{ date('Y') }} Sistema de Estudiantes</p>
+        </div>
+    </footer>
 
-        <footer class="bg-dark text-center text-white mt-4 p-3">
-            <div class="container text-center">
-                <p class="mb-0">&copy; {{ date('Y') }} Sistema de Estudiantes</p>
-            </div>
-        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-            
-    
 </body>
 </html>
