@@ -6,7 +6,7 @@
     <title>Inicio - Gestión</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">Gestión</a>
@@ -24,6 +24,7 @@
         </div>
     </nav>
 
+    <main class="flex-grow-1">
     <div class="container py-5">
         <div class="text-center mb-5">
             <h1 class="display-6 fw-semibold text-primary">Bienvenido al Sistema de Gestión</h1>
@@ -69,8 +70,9 @@
             </div>
         </div>
     </div>
+    </main>
 
-    <footer class="bg-dark text-white mt-5 py-3">
+    <footer class="bg-dark text-white mt-5 py-3 mt-auto">
         <div class="container text-center">
             <p class="mb-0">Sistema de Gestión &copy; {{ date('Y') }}</p>
         </div>
