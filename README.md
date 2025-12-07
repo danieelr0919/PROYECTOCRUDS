@@ -63,4 +63,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 PROYECTO EN PRODUCCION : proyectocruds-production.up.railway.app
 
 PROYECTO MOONSHINE EN PRODUCCION: https://proyectomoonshine-main-qzxevq.laravel.cloud/admin/login
+
+admin@tuempresa.com
+password
+
 REPOSITORIO PROYECTO MOONSHINE: https://github.com/danieelr0919/PROYECTOMOONSHINE.git
